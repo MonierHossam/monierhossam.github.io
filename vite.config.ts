@@ -8,9 +8,14 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react()
-  ],
+  base: '/monierhossam.github.io/',
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+}));
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
