@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Monier Hossam</title>
+    <script>
+      // GitHub Pages SPA redirect trick.
+      // Stores the current path in sessionStorage, then redirects to the root.
+      // The main app reads it on load and navigates to the correct route.
+      var path = window.location.pathname;
+      sessionStorage.setItem('ghpages_redirect', path);
+      window.location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>
