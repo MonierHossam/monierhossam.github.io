@@ -157,7 +157,7 @@ h1{
     "folder folder folder"
     "tools  canvas right";
   gap:8px;
-  height:calc(100vh - 200px);
+  height:calc(100vh - 252px);
   min-height:540px;
   max-width:1280px;width:100%;
   margin:0 auto;
@@ -992,6 +992,27 @@ kbd{
 }
 .app-footer a{color:var(--text-soft);text-decoration:none}
 .app-footer a:hover{color:var(--accent)}
+.app-footer .site-foot-links{display:flex;gap:18px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
+.app-footer .site-foot-links a{color:var(--text-soft);font-weight:500;font-size:11px}
+
+/* ── Site nav bar (portfolio chrome) ── */
+.site-bar{
+  width:100%;max-width:1280px;margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:8px 4px 12px;border-bottom:1px solid var(--border-subtle);
+}
+.site-logo{display:flex;align-items:center;gap:7px;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:-.2px}
+.site-logo .lg{font-size:18px;line-height:1}
+.site-logo .b1{color:#7aa2f7}
+.site-logo .b2{color:#9ece6a}
+.site-links{display:flex;align-items:center;gap:22px}
+.site-links a{color:var(--text-soft);text-decoration:none;font-size:13px;font-weight:500;transition:color .15s}
+.site-links a:hover{color:var(--accent)}
+@media (max-width:560px){
+  .site-links{gap:14px}
+  .site-links a{font-size:12px}
+  .site-logo{font-size:14px}
+}
 
 /* ── "Try a sample" button (empty states) ── */
 .sample-btn{
@@ -1005,6 +1026,18 @@ kbd{
 </style>
 </head>
 <body>
+<!-- ── Site nav bar (links back to the portfolio) ── -->
+<header class="site-bar">
+  <a class="site-logo" href="https://monierhossam.github.io/" title="Monier Hossam — Portfolio">
+    <span class="lg">🎮</span><span class="b1">Monier</span><span class="b2">Hossam</span>
+  </a>
+  <nav class="site-links">
+    <a href="https://monierhossam.github.io/">Portfolio</a>
+    <a href="https://monierhossam.github.io/tools">Tools</a>
+    <a href="https://monierhossam.github.io/hire">Hire Me</a>
+  </nav>
+</header>
+
 <!-- Compatibility / touch banner (shown conditionally on load) -->
 <div id="compatBanner" class="compat-banner" style="display:none">
   <span id="compatBannerMsg"></span>
@@ -1517,9 +1550,14 @@ kbd{
 </div>
 
 <footer class="app-footer">
-  🔒 Runs 100% in your browser — your images are never uploaded.
-  · <a href="https://github.com/MonierHossam" target="_blank" rel="noopener">by Monier Hossam</a>
-  · MIT licensed · ZIP via JSZip (MIT)
+  <div class="site-foot-links">
+    <a href="https://monierhossam.github.io/">Portfolio</a>
+    <a href="https://monierhossam.github.io/tools">More Tools</a>
+    <a href="https://monierhossam.github.io/hire">Hire Me</a>
+    <a href="https://www.linkedin.com/in/monier-hossam-64a3a8159" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div>🔒 Runs 100% in your browser — your images are never uploaded · MIT licensed · ZIP via JSZip (MIT)</div>
+  <div>© <span id="siteYear"></span> <a href="https://monierhossam.github.io" target="_blank" rel="noopener">Monier Hossam</a></div>
 </footer>
 
 <!-- ══════════════════════════════════════════════════════════
@@ -1566,8 +1604,8 @@ kbd{
       </p>
 
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:14px">
-        <a href="https://github.com/sponsors/MonierHossam" target="_blank" rel="noopener" class="about-link">☕ Support this tool</a>
-        <a href="https://github.com/MonierHossam" target="_blank" rel="noopener" class="about-link">🐙 GitHub</a>
+        <a href="https://monierhossam.github.io" target="_blank" rel="noopener" class="about-link">🌐 Portfolio</a>
+        <a href="https://monierhossam.github.io/tools" target="_blank" rel="noopener" class="about-link">🧰 More Tools</a>
         <span style="flex:1"></span>
         <span style="font-size:10.5px;color:var(--text-mute)">MIT licensed · ZIP via JSZip (MIT)</span>
       </div>
@@ -1589,8 +1627,9 @@ kbd{
 // ═══════════════════════════════════════════
 // VERSION — bump when updating this tool
 // ═══════════════════════════════════════════
-const VERSION = '2.1.1';
+const VERSION = '2.1.2';
 document.getElementById('versionTag').textContent = `v${VERSION}`;
+(function(){var y=document.getElementById('siteYear'); if(y) y.textContent=new Date().getFullYear();})();
 
 // ═══════════════════════════════════════════
 // COMPATIBILITY BANNER
