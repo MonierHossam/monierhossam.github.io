@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Segoe UI, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1b26"/>
+      <stop offset="1" stop-color="#16161e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7aa2f7"/>
+      <stop offset="1" stop-color="#bb9af7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- sprite-grid motif (right side) -->
+  <g opacity="0.9">
+    <rect x="760" y="150" width="90" height="90" rx="14" fill="#7aa2f7"/>
+    <rect x="870" y="150" width="90" height="90" rx="14" fill="#bb9af7"/>
+    <rect x="980" y="150" width="90" height="90" rx="14" fill="#9ece6a"/>
+    <rect x="760" y="260" width="90" height="90" rx="14" fill="#e0af68"/>
+    <rect x="870" y="260" width="90" height="90" rx="14" fill="#f7768e"/>
+    <rect x="980" y="260" width="90" height="90" rx="14" fill="#7dcfff"/>
+    <rect x="760" y="370" width="90" height="90" rx="14" fill="#fcd34d"/>
+    <rect x="870" y="370" width="90" height="90" rx="14" fill="#73daca"/>
+    <rect x="980" y="370" width="90" height="90" rx="14" fill="#fda4af"/>
+  </g>
+
+  <!-- logo chip -->
+  <rect x="80" y="120" width="64" height="64" rx="14" fill="url(#accent)"/>
+  <text x="112" y="166" font-size="34" font-weight="800" fill="#16161e" text-anchor="middle">SS</text>
+
+  <text x="164" y="166" font-size="40" font-weight="700" fill="#c0caf5">Sprite Sheet Toolkit</text>
+
+  <text x="80" y="270" font-size="62" font-weight="800" fill="url(#accent)">Slice. Extract.</text>
+  <text x="80" y="345" font-size="62" font-weight="800" fill="url(#accent)">Detect. Edit.</text>
+
+  <text x="80" y="410" font-size="27" fill="#9aa5ce">Game art tools that run 100% in your browser —</text>
+  <text x="80" y="448" font-size="27" fill="#9aa5ce">nothing uploaded, nothing tracked.</text>
+
+  <!-- tab chips -->
+  <g font-size="22" font-weight="600">
+    <rect x="80" y="500" width="170" height="48" rx="24" fill="#22232f" stroke="#2e2f3c"/>
+    <text x="165" y="531" fill="#7aa2f7" text-anchor="middle">Slice Sheet</text>
+    <rect x="265" y="500" width="180" height="48" rx="24" fill="#22232f" stroke="#2e2f3c"/>
+    <text x="355" y="531" fill="#e0af68" text-anchor="middle">Remove BG</text>
+    <rect x="460" y="500" width="195" height="48" rx="24" fill="#22232f" stroke="#2e2f3c"/>
+    <text x="557" y="531" fill="#9ece6a" text-anchor="middle">Detect Icons</text>
+    <rect x="670" y="500" width="175" height="48" rx="24" fill="#22232f" stroke="#2e2f3c"/>
+    <text x="757" y="531" fill="#bb9af7" text-anchor="middle">Photo Edit</text>
+  </g>
+</svg>
