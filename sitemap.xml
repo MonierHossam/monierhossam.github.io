@@ -29,4 +29,37 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://monierhossam.github.io/tools</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://monierhossam.github.io/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://monierhossam.github.io/ar/tools"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://monierhossam.github.io/ar/tools</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://monierhossam.github.io/tools"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://monierhossam.github.io/ar/tools"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://monierhossam.github.io/tools/sprite-sheet-toolkit/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://monierhossam.github.io/for-studios</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://monierhossam.github.io/for-studios"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://monierhossam.github.io/ar/for-studios"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://monierhossam.github.io/ar/for-studios</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://monierhossam.github.io/for-studios"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://monierhossam.github.io/ar/for-studios"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
