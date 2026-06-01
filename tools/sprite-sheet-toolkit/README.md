@@ -14,7 +14,8 @@ single file.
 ## 🔒 Private by design
 
 Everything runs locally in your browser using the Canvas API. **Your images
-are never uploaded, and nothing is tracked.** Works offline once loaded.
+never leave your device — no uploads, no backend.** Works fully offline once
+loaded.
 
 ## ✨ What's inside — four tools in one
 
@@ -53,9 +54,9 @@ A single HTML file: vanilla JavaScript + the Canvas API. The only dependency,
 [JSZip](https://stuk.github.io/jszip/) (for ZIP export), is vendored inline so
 the tool works fully offline.
 
-## ❤️ Support
+## More
 
-If this saves you time, consider [sponsoring](https://github.com/sponsors/MonierHossam).
+Built by Monier Hossam — see more tools and projects on my [portfolio](https://monierhossam.github.io).
 
 ## 📄 License
 

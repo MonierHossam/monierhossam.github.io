@@ -4,6 +4,30 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Sprite Sheet Toolkit — slice, extract &amp; edit game art in your browser</title>
+<!--
+  Minimal, privacy-respecting analytics.
+  Fires exactly ONE anonymous event ("Toolkit_Open") recording only whether the
+  page was reached from the website, an external referrer, or a direct link.
+  No image data, no feature/usage tracking — all editing stays 100% local.
+  Fails silently offline, so the tool remains fully usable with no network.
+-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-45HBB7WXGF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-45HBB7WXGF', { send_page_view: false });
+  (function () {
+    try {
+      var ref = document.referrer || '';
+      var host = ref ? new URL(ref).hostname : '';
+      var source = !host
+        ? 'direct'
+        : (host.indexOf('monierhossam.github.io') !== -1 ? 'website' : 'external');
+      gtag('event', 'Toolkit_Open', { source: source, tool: 'sprite-sheet-toolkit' });
+    } catch (e) { /* never break the tool for analytics */ }
+  })();
+</script>
 <meta name="description" content="Free, private, browser-based toolkit for game artists: slice sprite sheets, auto-remove backgrounds, detect UI icons, and edit images Photoshop-style. Runs 100% locally — your images never leave your device."/>
 <meta name="theme-color" content="#1a1b26"/>
 <meta name="color-scheme" content="dark"/>
