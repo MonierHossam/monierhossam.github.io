@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Sprite Sheet Toolkit — slice, extract &amp; edit game art in your browser</title>
+<title>Sprite Sheet Slicer &amp; Cutter — Free Online Toolkit (No Upload)</title>
+<meta name="keywords" content="sprite sheet slicer, sprite sheet cutter, sprite sheet splitter, split sprite sheet online, sprite sheet to png, extract sprites, unity sprite sheet, remove background from image, background remover online, online photo editor, online photoshop, free photoshop alternative, browser image editor, ui icon detector, extract icons from screenshot, free online game art tool"/>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-45HBB7WXGF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,7 +22,7 @@
     } catch (e) { /* never break the tool for analytics */ }
   })();
 </script>
-<meta name="description" content="Free, private, browser-based toolkit for game artists: slice sprite sheets, auto-remove backgrounds, detect UI icons, and edit images Photoshop-style. Runs 100% locally — your images never leave your device."/>
+<meta name="description" content="Free online sprite sheet slicer &amp; cutter, background remover, UI icon detector, and Photoshop-style photo editor — all in one. Split sprite sheets into PNGs, cut out backgrounds, and edit images 100% in your browser, no upload, no signup."/>
 <link rel="canonical" href="https://monierhossam.github.io/tools/sprite-sheet-toolkit/"/>
 <meta name="theme-color" content="#1a1b26"/>
 <meta name="color-scheme" content="dark"/>
@@ -29,8 +30,34 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231a1b26'/><rect x='6' y='6' width='8' height='8' rx='1.5' fill='%237aa2f7'/><rect x='18' y='6' width='8' height='8' rx='1.5' fill='%23bb9af7'/><rect x='6' y='18' width='8' height='8' rx='1.5' fill='%239ece6a'/><rect x='18' y='18' width='8' height='8' rx='1.5' fill='%23e0af68'/></svg>"/>
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Sprite Sheet Toolkit"/>
-<meta property="og:description" content="Slice sprite sheets, remove backgrounds, detect UI icons, and edit images — free and 100% in your browser."/>
+<meta property="og:title" content="Sprite Sheet Slicer &amp; Cutter — Free Online Toolkit"/>
+<meta property="og:description" content="4 tools in one: sprite sheet slicer, background remover, UI icon detector, and an online Photoshop-style editor — free, no upload, 100% in your browser."/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sprite Sheet Slicer &amp; Cutter — Free Online Toolkit"/>
+<meta name="twitter:description" content="4 tools in one: sprite sheet slicer, background remover, UI icon detector, and an online Photoshop-style editor — free, no upload."/>
+<meta name="twitter:image" content="https://monierhossam.github.io/tools/sprite-sheet-toolkit/assets/og.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sprite Sheet Toolkit",
+  "alternateName": "Sprite Sheet Slicer & Cutter",
+  "url": "https://monierhossam.github.io/tools/sprite-sheet-toolkit/",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript. Runs entirely client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": [
+    "Sprite sheet slicer & cutter (grid, auto-detect, manual)",
+    "One-click background remover",
+    "Computer-vision UI icon detector",
+    "Online Photoshop-style photo editor (layers, filters, undo/redo)",
+    "Export organized ZIP of PNGs + Unity layout.json"
+  ],
+  "description": "Four free browser tools in one: a sprite sheet slicer/cutter, a background remover, a UI icon detector, and an online Photoshop-style photo editor — 100% in the browser with no upload.",
+  "author": { "@type": "Person", "name": "Monier Hossam", "url": "https://monierhossam.github.io" }
+}
+</script>
 <meta property="og:url" content="https://monierhossam.github.io/tools/sprite-sheet-toolkit/"/>
 <meta property="og:image" content="https://monierhossam.github.io/tools/sprite-sheet-toolkit/assets/og.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
@@ -1063,12 +1090,12 @@ kbd{
 </div>
 
 <div class="app-header">
-  <h1>Sprite Sheet Toolkit</h1>
+  <h1>Sprite Sheet Slicer &amp; Toolkit</h1>
   <span class="beta-badge">BETA</span>
   <span id="versionTag"></span>
   <button id="btnAbout" class="header-btn" title="About, help &amp; keyboard shortcuts">? Help</button>
 </div>
-<p class="sub">Slice sheets · Remove backgrounds · Detect icons · Edit images — 100% in your browser, nothing uploaded</p>
+<p class="sub">Free online sprite sheet slicer &amp; cutter · background remover · UI icon detector · Photoshop-style photo editor — 100% in your browser, nothing uploaded</p>
 
 <!-- Top-level tab nav -->
 <nav class="top-tabs">
