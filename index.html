@@ -1,55 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — SPA pageviews are sent by usePageTracking, so
+         disable the automatic page_view to avoid double counting -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-45HBB7WXGF"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-45HBB7WXGF');
+      gtag('config', 'G-45HBB7WXGF', { send_page_view: false });
       gtag('config', 'AW-17635379854');
     </script>
-    <link rel="icon" type="image/jpeg" href="/imgs/monier.jpg" />
-    <link rel="apple-touch-icon" href="/imgs/monier.jpg" />
-    <link rel="shortcut icon" type="image/jpeg" href="/imgs/monier.jpg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/imgs/favicon.png" />
+    <link rel="apple-touch-icon" href="/imgs/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3b7fe3" />
+    <meta name="theme-color" content="#F4F6FB" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="preload" as="image" href="/imgs/monier.jpg" />
-    <title>Monier Hossam Senior Unity Game Developer</title>
-    <meta name="description" content="Monier Hossam Senior Unity Game Developer, PlayFab Expert, VR Developer, Unity Developer. 5+ years experience, 50+ projects, Unity, C#, PlayFab, AdMob, Photon, and more." />
+    <title>Monier Hossam — Senior Unity Game Developer for Hire | Mobile, VR, Multiplayer</title>
+    <meta name="description" content="Freelance senior Unity game developer for hire — 5+ years, 50+ shipped games, 100% Upwork success. Mobile, WebGL and VR game development, multiplayer netcode, and PlayFab backends." />
     <meta name="author" content="Monier Hossam" />
-    <meta name="keywords" content="monier hossam senior unity game developer, playfab expert, vr developer, unity developer, Unity, Game Developer, Senior, Mobile Games, VR, Multiplayer, C#, PlayFab, AdMob, Photon, Portfolio" />
+    <!-- Route-specific canonical/hreflang/OG tags are injected per route at build
+         time (scripts/postbuild-routes.mjs) and by react-helmet at runtime. -->
 
-    <!-- Canonical & hreflang -->
-    <link rel="canonical" href="https://monierhossam.github.io/" />
-    <link rel="alternate" hreflang="en" href="https://monierhossam.github.io/" />
-    <link rel="alternate" hreflang="ar" href="https://monierhossam.github.io/ar" />
-    <link rel="alternate" hreflang="x-default" href="https://monierhossam.github.io/" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Monier Hossam Senior Unity Game Developer, PlayFab Expert, VR Developer, Unity Developer" />
-    <meta property="og:description" content="Monier Hossam is a Senior Unity Game Developer, PlayFab Expert, VR Developer, and Unity Developer with 5+ years experience and 50+ projects." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://monierhossam.github.io/imgs/monier.jpg" />
-    <meta property="og:image:alt" content="Monier Hossam - Senior Unity Game Developer" />
-    <meta property="og:url" content="https://monierhossam.github.io" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="ar_EG" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Monier Hossam Senior Unity Game Developer, PlayFab Expert, VR Developer, Unity Developer" />
-    <meta name="twitter:description" content="Monier Hossam is a Senior Unity Game Developer, PlayFab Expert, VR Developer, and Unity Developer with 5+ years experience and 50+ projects." />
-    <meta name="twitter:image" content="https://monierhossam.github.io/imgs/monier.jpg" />
-    <meta name="twitter:site" content="@monierhossam" />
-
-    <!-- Fonts: Inter, Poppins (Latin) + Cairo (Arabic) -->
+    <!-- Fonts: Space Grotesk (display), Hanken Grotesk (body), JetBrains Mono (mono) + Cairo (Arabic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- JSON-LD structured data -->
     <script type="application/ld+json">
@@ -73,26 +52,34 @@
       "knowsAbout": ["Unity", "C#", "VR Development", "PlayFab", "Multiplayer Games", "Mobile Games", "Game Development"]
     }
     </script>
-    <!-- Service structured data for hire page -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Unity Game Development",
-      "provider": { "@type": "Person", "name": "Monier Hossam", "url": "https://monierhossam.github.io" },
-      "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "500", "description": "Starting price — projects scoped per quote" },
-      "url": "https://monierhossam.github.io/hire",
-      "areaServed": ["SA", "AE", "KW", "QA", "US", "GB"],
-      "description": "Complete game development using Unity — mobile, VR, and multiplayer. Projects start at $500."
+      "@type": "WebSite",
+      "name": "Monier Hossam",
+      "url": "https://monierhossam.github.io/"
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-GnwLWp1o.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-iiYLgxUc.css">
+    <script type="module" crossorigin src="/assets/index-CwOvWRys.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D2aOXjuA.css">
+      <link rel="canonical" href="https://monierhossam.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://monierhossam.github.io/" />
+    <link rel="alternate" hreflang="ar" href="https://monierhossam.github.io/ar" />
+    <link rel="alternate" hreflang="x-default" href="https://monierhossam.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://monierhossam.github.io/" />
+    <meta property="og:title" content="Monier Hossam — Senior Unity Game Developer for Hire | Mobile, VR, Multiplayer" />
+    <meta property="og:description" content="Freelance senior Unity game developer for hire — 5+ years, 50+ shipped games, 100% Upwork success. Mobile, WebGL and VR game development, multiplayer netcode, and PlayFab backends." />
+    <meta property="og:image" content="https://monierhossam.github.io/imgs/monier.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Monier Hossam — Senior Unity Game Developer for Hire | Mobile, VR, Multiplayer" />
+    <meta name="twitter:description" content="Freelance senior Unity game developer for hire — 5+ years, 50+ shipped games, 100% Upwork success. Mobile, WebGL and VR game development, multiplayer netcode, and PlayFab backends." />
+    <meta name="twitter:image" content="https://monierhossam.github.io/imgs/monier.jpg" />
+    <link rel="preload" as="image" href="/imgs/monier-720.webp" fetchpriority="high" />
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   </body>
 </html>
