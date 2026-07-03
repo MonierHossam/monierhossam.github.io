@@ -17,7 +17,7 @@
       var host = ref ? new URL(ref).hostname : '';
       var source = !host
         ? 'direct'
-        : (host.indexOf('monierhossam.github.io') !== -1 ? 'website' : 'external');
+        : (host === location.hostname ? 'website' : 'external');
       gtag('event', 'Toolkit_Open', { source: source, tool: 'sprite-sheet-toolkit' });
     } catch (e) { /* never break the tool for analytics */ }
   })();
@@ -60,10 +60,6 @@
 </script>
 <meta property="og:url" content="https://monierhossam.github.io/tools/sprite-sheet-toolkit/"/>
 <meta property="og:image" content="https://monierhossam.github.io/tools/sprite-sheet-toolkit/assets/og.png"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Sprite Sheet Toolkit"/>
-<meta name="twitter:description" content="Slice sprite sheets, remove backgrounds, detect UI icons, and edit images — free and 100% in your browser."/>
-<meta name="twitter:image" content="https://monierhossam.github.io/tools/sprite-sheet-toolkit/assets/og.png"/>
 <script>/*! JSZip 3.10.1 — MIT/GPLv3 dual — https://stuk.github.io/jszip/ — vendored for offline single-file use */
 /*!
 
@@ -1073,13 +1069,13 @@ kbd{
 <body>
 <!-- ── Site nav bar (links back to the portfolio) ── -->
 <header class="site-bar">
-  <a class="site-logo" href="https://monierhossam.github.io/" title="Monier Hossam — Portfolio">
+  <a class="site-logo" href="/" title="Monier Hossam — Portfolio">
     <span class="lg">🎮</span><span class="b1">Monier</span><span class="b2">Hossam</span>
   </a>
   <nav class="site-links">
-    <a href="https://monierhossam.github.io/">Portfolio</a>
-    <a href="https://monierhossam.github.io/tools">Tools</a>
-    <a href="https://monierhossam.github.io/hire">Hire Me</a>
+    <a href="/">Portfolio</a>
+    <a href="/tools">Tools</a>
+    <a href="/hire">Hire Me</a>
   </nav>
 </header>
 
@@ -1596,13 +1592,13 @@ kbd{
 
 <footer class="app-footer">
   <div class="site-foot-links">
-    <a href="https://monierhossam.github.io/">Portfolio</a>
-    <a href="https://monierhossam.github.io/tools">More Tools</a>
-    <a href="https://monierhossam.github.io/hire">Hire Me</a>
+    <a href="/">Portfolio</a>
+    <a href="/tools">More Tools</a>
+    <a href="/hire">Hire Me</a>
     <a href="https://www.linkedin.com/in/monier-hossam-64a3a8159" target="_blank" rel="noopener">LinkedIn</a>
   </div>
   <div>🔒 Runs 100% in your browser — your images are never uploaded · MIT licensed · ZIP via JSZip (MIT)</div>
-  <div>© <span id="siteYear"></span> <a href="https://monierhossam.github.io" target="_blank" rel="noopener">Monier Hossam</a></div>
+  <div>© <span id="siteYear"></span> <a href="/">Monier Hossam</a></div>
 </footer>
 
 <!-- ══════════════════════════════════════════════════════════
@@ -1649,8 +1645,8 @@ kbd{
       </p>
 
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:14px">
-        <a href="https://monierhossam.github.io" target="_blank" rel="noopener" class="about-link">🌐 Portfolio</a>
-        <a href="https://monierhossam.github.io/tools" target="_blank" rel="noopener" class="about-link">🧰 More Tools</a>
+        <a href="/" class="about-link">🌐 Portfolio</a>
+        <a href="/tools" class="about-link">🧰 More Tools</a>
         <span style="flex:1"></span>
         <span style="font-size:10.5px;color:var(--text-mute)">MIT licensed · ZIP via JSZip (MIT)</span>
       </div>
