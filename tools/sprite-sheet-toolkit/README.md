@@ -5,7 +5,7 @@ Slice sprite sheets, auto-remove backgrounds, detect UI icons, and edit
 images with a built-in Photoshop-style editor — all without uploading a
 single file.
 
-**▶ Live: https://monierhossam.github.io/tools/sprite-sheet-toolkit/**
+**▶ Live: https://monierhossam.com/tools/sprite-sheet-toolkit/**
 
 ![Sprite Sheet Toolkit](assets/og.png)
 
@@ -56,7 +56,7 @@ the tool works fully offline.
 
 ## More
 
-Built by Monier Hossam — see more tools and projects on my [portfolio](https://monierhossam.github.io).
+Built by Monier Hossam — see more tools and projects on my [portfolio](https://monierhossam.com).
 
 ## 📄 License
 
