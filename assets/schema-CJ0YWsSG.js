@@ -1,0 +1,1 @@
+import{a as e}from"./whatsapp-BQNfhsrG.js";const o={"@type":"Person","@id":`${e}/#person`,name:"Monier Hossam",url:`${e}/`},r=s=>({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:s.map((t,m)=>({"@type":"ListItem",position:m+1,name:t.name,item:`${e}${t.path}`}))});export{o as P,r as b};

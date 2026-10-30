@@ -1,84 +1,105 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <!-- Google tag (gtag.js) — SPA pageviews are sent by usePageTracking, so
-         disable the automatic page_view to avoid double counting -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-45HBB7WXGF"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Lets CSS hide reveal-on-scroll content only when JavaScript is running,
+      // so the prerendered HTML is fully readable without it.
+      document.documentElement.classList.add('js');
+    </script>
+    <!-- Google tag (gtag.js) with Consent Mode v2.
+         Defaults: denied in the EEA, UK and Switzerland until the visitor
+         chooses in the banner (src/components/ConsentBanner.tsx), granted
+         elsewhere. A stored choice is re-applied before any config call.
+         SPA pageviews are sent by usePageTracking, so the automatic page_view
+         is disabled to avoid double counting. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+        region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],
+        wait_for_update: 500
+      });
+      gtag('consent', 'default', {
+        ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+      });
+      try {
+        var mhConsent = window.localStorage.getItem('mh_consent_v1');
+        if (mhConsent === 'granted' || mhConsent === 'denied') {
+          gtag('consent', 'update', { ad_storage: mhConsent, ad_user_data: mhConsent, ad_personalization: mhConsent, analytics_storage: mhConsent });
+        }
+      } catch (e) { /* storage blocked: keep defaults */ }
+      gtag('set', 'ads_data_redaction', true);
       gtag('js', new Date());
       gtag('config', 'G-45HBB7WXGF', { send_page_view: false });
       gtag('config', 'AW-17635379854');
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-45HBB7WXGF"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="256x256" href="/imgs/favicon.png" />
     <link rel="apple-touch-icon" href="/imgs/favicon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#F4F6FB" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <title>أدوات تطوير ألعاب مجانية — مقص أوراق السبرايت والمزيد | منير حسام</title>
-    <meta name="description" content="أدوات مجانية تعمل في المتصفح لتطوير الألعاب: تقطيع أوراق السبرايت، إزالة الخلفية، اكتشاف الأيقونات، ومحرر صور — بدون رفع أو تسجيل." />
+    <!-- Defaults for the dev server. Production pages get their own title,
+         description, canonical, hreflang, Open Graph and JSON-LD from
+         react-helmet-async at build time (scripts/postbuild-routes.mjs). -->
     <meta name="author" content="Monier Hossam" />
-    <!-- Route-specific canonical/hreflang/OG tags are injected per route at build
-         time (scripts/postbuild-routes.mjs) and by react-helmet at runtime. -->
 
     <!-- Fonts: Space Grotesk (display), Hanken Grotesk (body), JetBrains Mono (mono) + Cairo (Arabic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- JSON-LD structured data -->
+    <!-- Site-wide JSON-LD. Page-specific schema (Service, FAQPage, Article,
+         BreadcrumbList) is added per page through src/components/Seo.tsx. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://monierhossam.com/#person",
       "name": "Monier Hossam",
-      "jobTitle": "Senior Game Developer",
-      "description": "Game and mobile game developer for freelance tasks, full projects, contracts and full-time roles. Unity, PlayFab, multiplayer and VR experience across 50+ completed projects.",
-      "url": "https://monierhossam.com",
+      "jobTitle": "Senior Unity Developer",
+      "description": "Senior Unity developer for game studios. Photon Fusion multiplayer, PlayFab and LiveOps backends, Meta Quest VR and Arabic RTL localization. Contributed to Football Manager 2026 and delivered 50+ client projects.",
+      "url": "https://monierhossam.com/",
       "image": "https://monierhossam.com/imgs/monier.jpg",
       "email": "monier.developer@gmail.com",
       "telephone": "+201024568636",
+      "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Greenwich" },
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Cloud Practitioner" },
       "sameAs": [
-        "http://www.linkedin.com/in/monier-hossam-64a3a8159",
+        "https://www.linkedin.com/in/monier-hossam-64a3a8159",
         "https://github.com/MonierHossam",
         "https://www.upwork.com/fl/~01c2d3277bbab78dcb",
-        "https://www.credly.com/users/monier-hossam/badges"
+        "https://www.credly.com/users/monier-hossam/badges",
+        "https://mindinvadersgames.com/"
       ],
+      "worksFor": { "@type": "Organization", "name": "Mind Invaders Games", "url": "https://mindinvadersgames.com/" },
       "knowsLanguage": ["en", "ar"],
-      "knowsAbout": ["Game Development", "Mobile Game Development", "Interactive Experiences", "Unity", "C#", "VR Development", "PlayFab", "Multiplayer Games"]
+      "knowsAbout": ["Unity", "C#", "Photon Fusion", "Multiplayer game development", "PlayFab", "LiveOps", "Meta Quest", "VR development", "Arabic localization", "RTL user interfaces", "WebGL", "Mobile game development"]
     }
     </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://monierhossam.com/#website",
       "name": "Monier Hossam",
-      "url": "https://monierhossam.com/"
+      "url": "https://monierhossam.com/",
+      "publisher": { "@id": "https://monierhossam.com/#person" }
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-BuXh_0ly.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D2aOXjuA.css">
-      <link rel="canonical" href="https://monierhossam.com/ar/tools/" />
-    <link rel="alternate" hreflang="en" href="https://monierhossam.com/tools/" />
-    <link rel="alternate" hreflang="ar" href="https://monierhossam.com/ar/tools/" />
-    <link rel="alternate" hreflang="x-default" href="https://monierhossam.com/tools/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://monierhossam.com/ar/tools/" />
-    <meta property="og:title" content="أدوات تطوير ألعاب مجانية — مقص أوراق السبرايت والمزيد | منير حسام" />
-    <meta property="og:description" content="أدوات مجانية تعمل في المتصفح لتطوير الألعاب: تقطيع أوراق السبرايت، إزالة الخلفية، اكتشاف الأيقونات، ومحرر صور — بدون رفع أو تسجيل." />
-    <meta property="og:image" content="https://monierhossam.com/imgs/monier.jpg" />
-    <meta property="og:locale" content="ar_SA" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="أدوات تطوير ألعاب مجانية — مقص أوراق السبرايت والمزيد | منير حسام" />
-    <meta name="twitter:description" content="أدوات مجانية تعمل في المتصفح لتطوير الألعاب: تقطيع أوراق السبرايت، إزالة الخلفية، اكتشاف الأيقونات، ومحرر صور — بدون رفع أو تسجيل." />
-    <meta name="twitter:image" content="https://monierhossam.com/imgs/monier.jpg" />
+    <script type="module" crossorigin src="/assets/index-baBNrJFj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CJYH4QcB.css">
+      <title data-rh="true">أدوات تطوير ألعاب مجانية، مقص أوراق السبرايت والمزيد | منير حسام</title>
+    <meta data-rh="true" name="description" content="أدوات مجانية تعمل في المتصفح لتطوير الألعاب. تقطيع أوراق السبرايت، وإزالة الخلفية، واكتشاف الأيقونات، ومحرر صور بنمط فوتوشوب، بدون رفع أو تسجيل."/><meta data-rh="true" property="og:type" content="website"/><meta data-rh="true" property="og:site_name" content="Monier Hossam"/><meta data-rh="true" property="og:url" content="https://monierhossam.com/ar/tools/"/><meta data-rh="true" property="og:title" content="أدوات تطوير ألعاب مجانية | منير حسام"/><meta data-rh="true" property="og:description" content="مقص أوراق سبرايت، وإزالة خلفية، واكتشاف أيقونات، ومحرر صور، مجانًا في المتصفح."/><meta data-rh="true" property="og:image" content="https://monierhossam.com/tools/sprite-sheet-toolkit/assets/og.png"/><meta data-rh="true" property="og:locale" content="ar_EG"/><meta data-rh="true" name="twitter:card" content="summary_large_image"/><meta data-rh="true" name="twitter:title" content="أدوات تطوير ألعاب مجانية | منير حسام"/><meta data-rh="true" name="twitter:description" content="مقص أوراق سبرايت، وإزالة خلفية، واكتشاف أيقونات، ومحرر صور، مجانًا في المتصفح."/><meta data-rh="true" name="twitter:image" content="https://monierhossam.com/tools/sprite-sheet-toolkit/assets/og.png"/>
+    <link data-rh="true" rel="canonical" href="https://monierhossam.com/ar/tools/"/><link data-rh="true" rel="alternate" hrefLang="en" href="https://monierhossam.com/tools/"/><link data-rh="true" rel="alternate" hrefLang="ar" href="https://monierhossam.com/ar/tools/"/><link data-rh="true" rel="alternate" hrefLang="x-default" href="https://monierhossam.com/tools/"/>
   </head>
 
   <body>
-    <div id="root"><main lang="ar" dir="rtl" style="max-width:900px;margin:8vh auto;padding:24px;font:18px/1.6 system-ui,sans-serif"><h1>أدوات مجانية لتطوير الألعاب</h1><p>أدوات تعمل في المتصفح لمطوري الألعاب، منها أداة تقطيع أوراق السبرايت وتجهيز رسومات الألعاب.</p><nav><a href="/tools/sprite-sheet-toolkit/">افتح أداة السبرايت</a> · <a href="/ar/hire/">خدمات تطوير الألعاب</a></nav></main></div>
+    <div id="root"><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><!--$--><div class="fg" lang="ar" dir="rtl"><div class="fg-atmo" data-anim="true" aria-hidden="true"><div class="fg-atmo__glow-a" data-anim="true"></div><div class="fg-atmo__glow-b" data-anim="true"></div><div class="fg-atmo__grid" data-anim="true"></div><div class="fg-atmo__scan" data-anim="true"></div><div class="fg-atmo__vignette"></div></div><nav class="fg-nav"><div class="fg-nav__inner"><a href="/ar/" class="fg-logo" aria-label="Monier Hossam, home"><span class="fg-logo__mark">MH</span><span style="display:flex;flex-direction:column"><span class="fg-logo__name" dir="ltr">Monier Hossam</span><span class="fg-logo__tag" dir="ltr">Unity · C# · VR</span></span></a><div class="fg-navlinks"><a href="/ar/#work" class="fg-navlink">الأعمال</a><a href="/ar/#services" class="fg-navlink">الخدمات</a><a href="/ar/#experience" class="fg-navlink">الخبرة</a><a class="fg-navlink" href="/work/">دراسات الحالة</a><a class="fg-navlink is-active" href="/ar/tools/">الأدوات</a><button class="fg-iconbtn" aria-label="Switch to English"><span lang="en">EN</span></button><a class="fg-nav__cta" href="/ar/hire/"><span class="fg-dot"></span><span>وظّفني</span></a></div><button class="fg-burger" aria-label="Open menu" aria-expanded="false" aria-controls="fg-mobilemenu"><span style="display:block;width:18px;height:11px;position:relative"><span style="position:absolute;top:0;left:0;width:18px;height:1.6px;background:currentColor"></span><span style="position:absolute;top:5px;left:0;width:18px;height:1.6px;background:currentColor"></span><span style="position:absolute;top:10px;left:0;width:12px;height:1.6px;background:currentColor"></span></span></button></div></nav><main><section class="fg-section" style="padding-top:150px"><div><div class="fg-kicker fg-reveal">// 08 · أدوات مجانية</div><h1 class="fg-h2 fg-reveal">أدوات مجانية</h1></div><p class="fg-sub fg-reveal" style="max-width:60ch">أدوات مجانية تعمل في المتصفح صنعتها لتسريع تطوير الألعاب. تعمل بالكامل على جهازك.</p><p class="fg-reveal" style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--fg-m);font-size:13px;color:var(--fg-live)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg> <!-- -->100% داخل متصفحك، ولا يتم رفع أي شيء.</p><div class="fg-feature fg-reveal" style="margin-top:40px"><a class="fg-feature__media" href="/tools/sprite-sheet-toolkit/" target="_blank" rel="noopener noreferrer" aria-label="افتح الأداة"><img src="/imgs/personalProjects/SpriteSheetToolkit/0.png" alt="Sprite Sheet Toolkit, a free browser based sprite sheet slicer, background remover and icon detector" loading="lazy"/></a><div class="fg-feature__body"><span class="fg-feature__badge">BETA · <!-- -->مجاني</span><h2 class="fg-feature__h" dir="ltr">Sprite Sheet Toolkit</h2><p class="fg-feature__p">أداة مجانية لمعالجة الصور تعمل بالكامل داخل المتصفح لمصممي الألعاب: تقطيع أوراق السبرايت، إزالة الخلفية بنقرة، اكتشاف الأيقونات بالرؤية الحاسوبية، ومحرر صور بنمط فوتوشوب. لا رفع ولا خادم، فصورك لا تغادر متصفحك.</p><div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px"><span class="fg-chip" style="display:inline-flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scissors-line-dashed"><path d="M5.42 9.42 8 12"></path><circle cx="4" cy="8" r="2"></circle><path d="m14 6-8.58 8.58"></path><circle cx="4" cy="16" r="2"></circle><path d="M10.8 14.8 14 18"></path><path d="M16 12h-2"></path><path d="M22 12h-2"></path></svg> <!-- -->تقطيع الأوراق</span><span class="fg-chip" style="display:inline-flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wand-sparkles"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg> <!-- -->إزالة الخلفية</span><span class="fg-chip" style="display:inline-flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-search"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><circle cx="12" cy="12" r="3"></circle><path d="m16 16-1.9-1.9"></path></svg> <!-- -->اكتشاف الأيقونات</span><span class="fg-chip" style="display:inline-flex;align-items:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg> <!-- -->محرر الصور</span></div><div style="margin-top:26px"><a href="/tools/sprite-sheet-toolkit/" target="_blank" rel="noopener noreferrer" class="fg-btn fg-btn--primary">افتح الأداة<!-- --> ↗</a></div></div></div></section></main><footer class="fg-footer" style="flex-direction:column;align-items:stretch;gap:20px"><nav aria-label="Site" style="display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center"><a href="/ar/hire/">وظّف مطور Unity أول</a><a href="/ar/for-studios/">مطور Unity للاستوديوهات</a><a href="/work/">دراسات الحالة</a><a href="/ar/tools/">أدوات تطوير ألعاب مجانية</a><a href="/Monier%20Hossam%20CV.pdf" target="_blank" rel="noopener noreferrer">تحميل السيرة الذاتية</a></nav><nav aria-label="خدمات متخصصة" style="display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center" dir="ltr"><a href="/photon-fusion-developer/">Photon Fusion multiplayer</a><a href="/playfab-developer/">PlayFab backend and LiveOps</a><a href="/unity-vr-developer/">Meta Quest VR development</a><a href="/unity-arabic-localization/">Arabic RTL localization</a></nav><div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px"><span>© 2026 منير حسام · مطوّر Unity أول</span><a href="#root">العودة للأعلى<!-- --> ↑</a></div></footer><a class="fg-wafab" data-anim="true" href="https://wa.me/201024568636?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%85%D9%86%D9%8A%D8%B1%D8%8C%20%D8%A3%D9%88%D8%AF%20%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%20%D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1%20%D9%84%D8%B9%D8%A8%D8%A9." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp"><svg width="30" height="30" viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16.04 4C9.86 4 4.84 9.02 4.84 15.2c0 2.13.6 4.12 1.64 5.82L4.5 28l7.16-1.94c1.34.73 2.84 1.12 4.38 1.12h.01c6.18 0 11.2-5.02 11.2-11.2 0-2.99-1.16-5.8-3.28-7.92A11.13 11.13 0 0 0 16.04 4Zm0 2.04c2.45 0 4.75.96 6.48 2.69a9.1 9.1 0 0 1 2.69 6.47c0 5.06-4.12 9.16-9.18 9.16-1.5 0-2.98-.4-4.28-1.13l-.3-.18-3.18.84.85-3.1-.2-.32a9.06 9.06 0 0 1-1.39-4.82c0-5.05 4.11-9.16 9.16-9.16Zm-3.96 4.74c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.35.99 2.66 1.12 2.84.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.52-.08 1.61-.66 1.84-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.52-.32-.27-.13-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.72-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.49-.84-2.04-.22-.53-.44-.46-.61-.46l-.52-.01Z"></path></svg></a></div><!--/$--></div>
   </body>
 </html>
