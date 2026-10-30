@@ -1,0 +1,14 @@
+# Public GitHub Pages repo. Only the built site belongs here.
+.env
+.env.*
+*.log
+*.local
+node_modules/
+.claude/
+.firebase/
+.vscode/
+.idea/
+_business-internal/
+.DS_Store
+Thumbs.db
+desktop.ini
