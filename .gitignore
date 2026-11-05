@@ -12,3 +12,17 @@ _business-internal/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Never publish transfer archives, checksums, notes or scripts
+_*
+*.tgz
+*.tar
+*.gz
+*.zip
+*.7z
+*.rar
+*.md5
+*.sha256
+*.ps1
+*.py
+*.map
