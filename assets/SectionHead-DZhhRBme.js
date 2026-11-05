@@ -1,0 +1,1 @@
+import{j as e}from"./index-CPYkEqT_.js";const d=({kicker:s,title:a,narrow:r=!0,as:i="h2"})=>e.jsxs("div",{className:r?"fg-headwrap":void 0,children:[e.jsx("div",{className:"fg-kicker fg-reveal",children:s}),e.jsx(i,{className:"fg-h2 fg-reveal",children:a})]});export{d as S};
